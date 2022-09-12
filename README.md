@@ -1,6 +1,3 @@
-# zero-base ConnecTo
+# Sass 프리프로세서
 
-제로베이스 커넥to : 프론트엔드 학습 저장소
-
-- [Sass](https://sass-lang.com/) — CSS 프리프로세서
-- [Tailwind CSS](https://tailwindcss.com/) — 유틸리티 퍼스트
+UI 디자인 파일 다운로드: [TaskList (figma)](https://www.figma.com/file/qbQoxOz0eOlJIFTxgHlSUL/Task-List/duplicate)

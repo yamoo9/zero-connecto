@@ -1,0 +1,6 @@
+{
+  "private": true,
+  "scripts": {
+    "serve": "npx live-server public --host=localhost --port=3000 --no-browser"
+  }
+}

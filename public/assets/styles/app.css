@@ -185,12 +185,4 @@ body {
   fill: currentColor;
 }
 
-.home {
-  display: flex;
-  flex-flow: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  min-height: 100vh;
-}
-
 /*# sourceMappingURL=app.css.map */

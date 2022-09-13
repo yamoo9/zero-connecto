@@ -1,6 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "serve": "npx live-server public --host=localhost --port=3000 --no-browser"
+    "serve": "npx live-server public --host=localhost --port=3000 --no-browser",
+    "compile": "sass sass/app.scss public/assets/styles/app.css",
+    "watch": "npm run compile -- --watch --update"
   }
 }

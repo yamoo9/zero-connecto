@@ -1,7 +1,11 @@
+@use '../config' as *;
+
 .header {
   width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: {
+    top: 20px;
+    bottom: 20px;
+  }
 }
 
 .header--sticky {

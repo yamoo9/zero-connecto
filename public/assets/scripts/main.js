@@ -1,4 +1,4 @@
-import { $, attr } from './dom.js';
+import { $, attr } from './dom/index.js';
 import { renderCurrentYear } from './copyright.js';
 import {
   detectDarkMode,

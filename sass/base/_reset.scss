@@ -1,3 +1,5 @@
+@use '../components' as *;
+
 .reset {
   &--box-model {
     margin: 0;
@@ -27,20 +29,13 @@
     text-decoration: none;
   }
   &--table {
-    border-collapse: collapse;
-    border-spacing: 0;
+    border: {
+      collapse: collapse;
+      spacing: 0;
+    }
 
     caption {
-      overflow: hidden;
-      position: absolute;
-      clip: rect(0, 0, 0, 0);
-      clip-path: circle(0);
-      width: 1px;
-      height: 1px;
-      margin: -1px;
-      border: 0;
-      padding: 0;
-      white-space: nowrap;
+      @extend a11yHidden !optional;
     }
   }
 }

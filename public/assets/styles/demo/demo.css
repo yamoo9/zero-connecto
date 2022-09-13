@@ -1,0 +1,33 @@
+/* Extend + Placeholder Selector */
+.error--big, .error--seriously, .error {
+  margin: -0.4em;
+  padding: 0.4em 0.6em;
+  background: darkred;
+  color: red;
+}
+
+.error--seriously {
+  font-weight: bold;
+}
+.error--big {
+  font-size: 22px;
+}
+
+/* Mixin */
+.demo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.demo__content {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.demo__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=demo.css.map */

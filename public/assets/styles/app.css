@@ -20,54 +20,6 @@ body {
   color: var(--secondary);
 }
 
-.reset--box-model {
-  margin: 0;
-  border: 0;
-  padding: 0;
-}
-.reset--button {
-  cursor: pointer;
-}
-.reset--button svg {
-  pointer-events: none;
-}
-.reset--button:disabled {
-  cursor: not-allowed;
-}
-.reset--list, .navigation--list {
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-}
-.reset--anchor, .navigation--link {
-  color: currentColor;
-  text-decoration: none;
-}
-.reset--abbr {
-  cursor: help;
-  text-decoration: none;
-}
-.reset--table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-.reset--table caption {
-  overflow: hidden;
-  position: absolute;
-  clip: rect(0, 0, 0, 0);
-  clip-path: circle(0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-}
-
-body {
-  font: 1rem/1.5 "Spoqa Han Sans Neo", sans-serif;
-}
-
 .toggleDarkMode {
   cursor: pointer;
   border: 0;
@@ -161,6 +113,54 @@ body {
   display: block;
   width: auto;
   height: 48px;
+}
+
+.a11yHidden {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  clip-path: circle(0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.reset--box-model {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+.reset--button {
+  cursor: pointer;
+}
+.reset--button svg {
+  pointer-events: none;
+}
+.reset--button:disabled {
+  cursor: not-allowed;
+}
+.reset--list, .navigation--list {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+.reset--anchor, .navigation--link {
+  color: currentColor;
+  text-decoration: none;
+}
+.reset--abbr {
+  cursor: help;
+  text-decoration: none;
+}
+.reset--table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body {
+  font: 1rem/1.5 "Spoqa Han Sans Neo", sans-serif;
 }
 
 .header {

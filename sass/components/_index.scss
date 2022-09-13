@@ -1,6 +1,7 @@
-@use 'button';
-@use 'container';
-@use 'content';
-@use 'features';
-@use 'headline';
-@use 'logo';
+@forward 'button';
+@forward 'container';
+@forward 'content';
+@forward 'features';
+@forward 'headline';
+@forward 'logo';
+@forward 'a11y';

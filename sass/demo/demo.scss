@@ -1,3 +1,5 @@
+@use '../config' as *;
+
 /* Extend + Placeholder Selector */
 
 %error-base {
@@ -29,6 +31,7 @@
 
 .demo {
   @include flexLayout;
+  @include fluidWidth(12);
 
   &__content {
     @include flexLayout(inline-flex);
@@ -39,4 +42,6 @@
   }
 }
 
-//  <div role="alert" class="error">오류 메시지</div>
+@include makeA11yHidden('table caption');
+@include makeA11yHidden('figure figcaption');
+@include makeA11yHidden('.skipToContent a', true);

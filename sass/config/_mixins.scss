@@ -1,0 +1,41 @@
+@use 'sass:math';
+
+@mixin a11yHidden($focusable: false) {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  clip-path: circle(0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+
+  @if $focusable {
+    &.focusable:focus {
+      overflow: initial;
+      position: initial;
+      clip: initial;
+      clip-path: initial;
+      width: initial;
+      height: initial;
+      margin: initial;
+      border: initial;
+      padding: initial;
+      white-space: initial;
+    }
+  }
+}
+
+@mixin makeA11yHidden($selector, $focusable: false) {
+  #{$selector} {
+    @include a11yHidden($focusable);
+  }
+}
+
+@mixin fluidWidth($divideRatio) {
+  $result: math.div(100%, $divideRatio);
+  // $result: 100% / $divideRatio;
+  width: $result;
+}

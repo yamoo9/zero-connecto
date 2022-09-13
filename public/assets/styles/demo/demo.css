@@ -1,3 +1,19 @@
+:root {
+  --forground: #000;
+  --background: #fff;
+  --primary: hsl(330deg, 50%, 50%);
+  --secondary: hsl(330deg, 10%, 30%);
+  --border: hsl(330deg, 50%, 80%);
+}
+
+.dark {
+  --forground: hsl(330deg, 50%, 95%);
+  --background: hsl(330deg, 50%, 10%);
+  --primary: hsl(330deg, 50%, 70%);
+  --secondary: hsl(330deg, 10%, 70%);
+  --border: hsl(330deg, 50%, 40%);
+}
+
 /* Extend + Placeholder Selector */
 .error--big, .error--seriously, .error {
   margin: -0.4em;
@@ -18,6 +34,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  width: 8.3333333333%;
 }
 .demo__content {
   display: inline-flex;
@@ -28,6 +45,57 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+table caption {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  clip-path: circle(0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+figure figcaption {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  clip-path: circle(0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.skipToContent a {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  clip-path: circle(0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+.skipToContent a.focusable:focus {
+  overflow: initial;
+  position: initial;
+  clip: initial;
+  clip-path: initial;
+  width: initial;
+  height: initial;
+  margin: initial;
+  border: initial;
+  padding: initial;
+  white-space: initial;
 }
 
 /*# sourceMappingURL=demo.css.map */

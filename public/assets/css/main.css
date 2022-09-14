@@ -6,13 +6,13 @@ body *::before, body *::after, body, body::before, body::after {
 }
 
 :root {
-  font-size: 62.5%;
+  font-size: 100%;
 }
 
 body {
-  font: 1.6rem/1.5 "Open Sans", Dotum, Arial, Verdana, sans-serif;
-  background: #ffffff;
-  color: #000000;
+  font: 1rem/1.5 "Open Sans", Dotum, Arial, Verdana, sans-serif;
+  background: #000000;
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=main.css.map */

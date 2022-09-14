@@ -1,4 +1,23 @@
 @use 'sass:math';
+@use 'sass:map';
+@use 'variables/colors' as *;
+
+@function get-color($map, $level) {
+  @return map.get($map, $level);
+}
+
+@function get-red($level) {
+  @return get-color($red, $level);
+}
+@function get-gray($level) {
+  @return get-color($gray, $level);
+}
+@function get-blue($level) {
+  @return get-color($blue, $level);
+}
+@function get-green($level) {
+  @return get-color($green, $level);
+}
 
 @function remove-unit($unit) {
   @return math.div($unit, $unit * 0 + 1);

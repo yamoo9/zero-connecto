@@ -1,2 +1,12 @@
+@use 'abstracts' as * with (
+  $base-rem-size: 16
+);
 @use 'base';
-@use 'abstracts' as *;
+@use 'sass:meta';
+
+@debug meta.type-of(null);
+@debug meta.type-of(100px);
+@debug meta.type-of(100%);
+@debug meta.type-of(hi);
+@debug meta.type-of(hsl(0, 0%, 13%));
+@debug meta.type-of(true);

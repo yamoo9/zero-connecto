@@ -5,7 +5,6 @@
 }
 
 body {
-  font: #{$base-font-size}/#{$base-leading} $font-family;
-  background: $white;
-  color: $black;
+  @include font();
+  @include colors($white, $black);
 }

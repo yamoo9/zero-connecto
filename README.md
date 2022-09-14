@@ -1,6 +1,10 @@
-# zero-base ConnecTo
+# Cross Direction Carousel UI 디자인 실습
 
-제로베이스 커넥to : 프론트엔드 학습 저장소
+크로스 디렉션 캐러셀 UI 디자인 with Sass
 
-- [Sass](https://sass-lang.com/) — CSS 프리프로세서
-- [Tailwind CSS](https://tailwindcss.com/) — 유틸리티 퍼스트
+- [x] Sass 매뉴얼 개발 환경 구성
+- [x] 디자인 토큰(Token) - 색상 체계, 타이포그래피 설계
+- [ ] ...
+- [ ] ...
+- [ ] ...
+- [ ] ...

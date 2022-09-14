@@ -1,0 +1,24 @@
+body *::before, body *::after, body::before, body::after {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* -------------------------------------------------------------------------- */
+/* COLORS                                                                     */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* TYPOGRAPHY                                                                 */
+/* -------------------------------------------------------------------------- */
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font: 1.6rem/1.5 "Open Sans", Dotum, Arial, Verdana, sans-serif;
+  background: #ffffff;
+  color: #000000;
+}
+
+/*# sourceMappingURL=main.css.map */

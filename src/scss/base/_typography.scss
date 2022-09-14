@@ -1,0 +1,11 @@
+@use '../abstracts' as *;
+
+:root {
+  font-size: $base-rem-percentage;
+}
+
+body {
+  font: #{$base-font-size}/#{$base-leading} $font-family;
+  background: $white;
+  color: $black;
+}

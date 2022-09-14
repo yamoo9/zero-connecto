@@ -13,6 +13,7 @@
 }
 
 body {
+  @extend %reset-box-model;
   @extend %reset-pseudo-element;
   * {
     &::before,

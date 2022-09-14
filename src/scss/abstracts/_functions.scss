@@ -4,7 +4,7 @@
   @return math.div($unit, $unit * 0 + 1);
 }
 
-@function get-base-rem-size($base-px-size) {
+@function get-base-rem-size-percentage($base-px-size) {
   @return math.div(remove-unit($base-px-size), 16) * 100%;
 }
 

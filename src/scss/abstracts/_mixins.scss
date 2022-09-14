@@ -1,4 +1,6 @@
+@use 'sass:map';
 @use 'variables' as *;
+@use 'functions' as *;
 
 @mixin font(
   $size: $base-font-size,
@@ -19,4 +21,23 @@
   }
   #{$min-or-max}width: $width;
   #{$min-or-max}height: $height;
+}
+
+@mixin make-color-util($name) {
+  $color-values: map.get($colors, $name);
+  @each $prefix in text, bg {
+    $name: '' + $name;
+    $prop: if($prefix == text, color, background-color);
+    @if is-color($color-values) {
+      .#{$prefix}-#{$name} {
+        #{$prop}: $color-values;
+      }
+    } @else {
+      @each $key, $value in $color-values {
+        .#{$prefix}-#{$name}-#{$key} {
+          #{$prop}: $value;
+        }
+      }
+    }
+  }
 }

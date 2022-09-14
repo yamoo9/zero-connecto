@@ -3,6 +3,10 @@
 );
 @use 'base';
 @use 'sass:meta';
+@use 'sass:string';
+
+@debug string.index('hi sass', 'sass');
+@debug string.index('hi sass', 'scss');
 
 @function demo() {
   @return null;
@@ -22,3 +26,6 @@
 );
 
 // @debug is-function(demo);
+
+@debug has-unit(20px); // true
+@debug has-unit(1.5); // false

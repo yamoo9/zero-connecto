@@ -2,30 +2,11 @@
   $base-rem-size: 16
 );
 @use 'base';
+
 @use 'sass:meta';
-@use 'sass:string';
 
-@debug string.index('hi sass', 'sass');
-@debug string.index('hi sass', 'scss');
-
-@function demo() {
+@function fn() {
   @return null;
 }
 
-@debug is-null(null);
-@debug is-string('design is all. all is design');
-@debug is-color(rgb(233, 21, 2));
-@debug is-number(100px);
-@debug is-bool(not true);
-@debug is-list(100px 20px);
-@debug is-map(
-  (
-    width: 100px,
-    height: 20px,
-  )
-);
-
-// @debug is-function(demo);
-
-@debug has-unit(20px); // true
-@debug has-unit(1.5); // false
+@debug is-function(meta.get-function(fn));

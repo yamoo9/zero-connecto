@@ -37,8 +37,8 @@
   @return is-type($data) == 'map';
 }
 
-@function is-function($data) {
-  @return is-type(meta.get-function($data)) == 'function';
+@function is-function($get-function-value) {
+  @return is-type($get-function-value) == 'function';
 }
 
 // --------------------------------------------------------------------------

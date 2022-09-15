@@ -1,0 +1,15 @@
+@use 'sass:list';
+@use '../abstracts' as *;
+
+$ratios: (
+  '4:3': 4 3,
+  '16:9': 16 9,
+  '21:9': 21 9,
+  '22:10': 22 10,
+);
+
+@each $key, $value in $ratios {
+  $width: list.nth($value, 1);
+  $height: list.nth($value, 2);
+  @include make-rwd-media($width, $height);
+}

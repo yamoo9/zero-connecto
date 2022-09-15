@@ -8,17 +8,19 @@
 }
 
 @mixin make-color-util($name) {
-  $color-values: map.get($colors, $name);
-  @each $prefix in text, bg {
-    $name: '' + $name;
-    $prop: if($prefix == text, color, background-color);
-    @if is-color($color-values) {
+  $prefixes: 'text', 'bg';
+  $color-value: map.get($colors, $name);
+  $name: if(is-color($name), #{$name}, $name);
+
+  @each $prefix in $prefixes {
+    $prop: if($prefix == 'text', 'color', 'background-color');
+    @if is-color($color-value) {
       .#{$prefix}-#{$name} {
-        #{$prop}: $color-values;
+        #{$prop}: $color-value;
       }
-    } @else {
-      @each $key, $value in $color-values {
-        .#{$prefix}-#{$name}-#{$key} {
+    } @else if is-map($color-value) {
+      @each $variant, $value in $color-value {
+        .#{$prefix}-#{$name}-#{$variant} {
           #{$prop}: $value;
         }
       }

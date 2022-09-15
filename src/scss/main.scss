@@ -1,6 +1,2 @@
-@use 'abstracts' as *;
 @use 'base';
-
-@each $key, $value in $colors {
-  @include make-color-util($key);
-}
+@use 'utilities';

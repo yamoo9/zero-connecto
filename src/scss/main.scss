@@ -1,2 +1,32 @@
-@use 'base';
-@use 'utilities';
+// @use 'base';
+// @use 'utilities';
+@use 'abstracts' as *;
+
+.banner {
+  // mobile first
+  background: red;
+
+  @include mq(md) {
+    background: indigo;
+  }
+  @include mq(lg) {
+    background: skyblue;
+  }
+  @include mq(xl) {
+    background: hotpink;
+  }
+}
+
+.sidebar {
+  color: red;
+
+  @include mq(md) {
+    color: icolorigo;
+  }
+  @include mq(lg) {
+    color: skyblue;
+  }
+  @include mq(xl) {
+    color: hotpink;
+  }
+}

@@ -36,28 +36,30 @@
   }
 }
 
-@mixin position($type, $props: ()) {
+@mixin position($type, $props: null) {
   position: $type;
-  @include get-match-value-of-props($props, z-index z);
-  @include get-match-value-of-props($props, top t);
-  @include get-match-value-of-props($props, right r);
-  @include get-match-value-of-props($props, bottom b);
-  @include get-match-value-of-props($props, left l);
+  @if is-list($props) {
+    @include get-match-value-of-props($props, z-index z);
+    @include get-match-value-of-props($props, top t);
+    @include get-match-value-of-props($props, right r);
+    @include get-match-value-of-props($props, bottom b);
+    @include get-match-value-of-props($props, left l);
+  }
 }
 
-@mixin relative($props) {
+@mixin relative($props: null) {
   @include position(relative, $props);
 }
 
-@mixin absolute($props) {
+@mixin absolute($props: null) {
   @include position(absolute, $props);
 }
 
-@mixin fixed($props) {
+@mixin fixed($props: null) {
   @include position(fixed, $props);
 }
 
-@mixin sticky($props) {
+@mixin sticky($props: null) {
   @include position(sticky, $props);
 }
 

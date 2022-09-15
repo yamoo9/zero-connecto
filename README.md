@@ -1,6 +1,3 @@
-# zero-base ConnecTo
+# Tailwind CSS
 
-제로베이스 커넥to : 프론트엔드 학습 저장소
-
-- [Sass](https://sass-lang.com/) — CSS 프리프로세서
-- [Tailwind CSS](https://tailwindcss.com/) — 유틸리티 퍼스트
+유틸리티 퍼스트 CSS 프레임워크를 사용하면 HTML 마크업에서 모든 디자인을 직접 빌드하도록 구성할 수 있습니다.

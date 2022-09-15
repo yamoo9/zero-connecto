@@ -1,26 +1,10 @@
 @use 'sass:map';
-@use 'variables' as *;
-@use 'functions' as *;
-
-@mixin font(
-  $size: $base-font-size,
-  $leading: $base-leading,
-  $family: $font-family
-) {
-  font: #{$size}/#{$leading} $family;
-}
+@use '../variables' as *;
+@use '../functions' as *;
 
 @mixin colors($forground: null, $background: null) {
   background: $background;
   color: $forground;
-}
-
-@mixin size($width, $height: $width, $min-or-max: '') {
-  @if $min-or-max != '' {
-    $min-or-max: if($min-or-max == min, 'min-', 'max-');
-  }
-  #{$min-or-max}width: $width;
-  #{$min-or-max}height: $height;
 }
 
 @mixin make-color-util($name) {

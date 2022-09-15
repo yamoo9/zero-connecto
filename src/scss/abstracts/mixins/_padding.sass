@@ -1,0 +1,42 @@
+@use '../variables/spacing' as *
+@use '../functions' as *
+  
+=padding($ratio, $position: null)
+  @if has-unit($ratio)
+    padding: $ratio
+  @else
+    $value: add-unit(remove-unit($base-spacing) * remove-unit($ratio))
+    @if not $position
+      padding: $value
+    @else if $position == top
+      padding-top: $value
+    @else if $position == right
+      padding-right: $value
+    @else if $position == bottom
+      padding-bottom: $value
+    @else if $position == left
+      padding-left: $value
+
+=p($ratio)
+  +padding($ratio)
+
+=pt($ratio)
+  +padding($ratio, top)
+
+=pr($ratio)
+  +padding($ratio, right)
+
+=pb($ratio)
+  +padding($ratio, bottom)
+
+=pl($ratio)
+  +padding($ratio, left)
+
+=px($ratio)
+  +pr($ratio)
+  +pl($ratio)
+
+=py($ratio)
+  +pt($ratio)
+  +pb($ratio)
+

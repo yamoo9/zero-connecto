@@ -1,0 +1,21 @@
+@mixin position($type, $props: ()) {
+  position: $type;
+  // z-index, z
+  // top, t
+  // left, l
+  // right, r
+  // bottom, b
+}
+
+@mixin relative() {
+  @include position(relative);
+}
+@mixin absolute() {
+  @include position(absolute);
+}
+@mixin fixed() {
+  @include position(fixed);
+}
+@mixin sticky() {
+  @include position(sticky);
+}

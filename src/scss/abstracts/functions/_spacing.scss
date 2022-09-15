@@ -1,0 +1,9 @@
+@use 'sass:meta';
+@use '../variables/spacing' as *;
+@use 'units' as *;
+
+@function spacing($ratio, $base: $base-spacing, $unit: 'px') {
+  $ratio: if(has-unit($ratio), remove-unit($ratio), $ratio);
+  $base: if(has-unit($base), remove-unit($base), $base);
+  @return add-unit($ratio * $base, $unit);
+}

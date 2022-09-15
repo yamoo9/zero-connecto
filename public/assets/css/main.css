@@ -1,5 +1,7 @@
-.content {
-  position: relative;
+.banner {
+  position: sticky;
+  z-index: 800;
+  top: 48px;
 }
 
 /*# sourceMappingURL=main.css.map */

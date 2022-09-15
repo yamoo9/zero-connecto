@@ -1,21 +1,66 @@
-@mixin position($type, $props: ()) {
-  position: $type;
-  // z-index, z
-  // top, t
-  // left, l
-  // right, r
-  // bottom, b
+@use 'sass:list';
+@use 'sass:string';
+@use '../functions' as *;
+
+@function get-prop-name($key) {
+  $result: null;
+  @if $key == t {
+    $result: top;
+  }
+  @if $key == r {
+    $result: right;
+  }
+  @if $key == b {
+    $result: bottom;
+  }
+  @if $key == l {
+    $result: left;
+  }
+  @if $key == z {
+    $result: z-index;
+  }
+  @return $result;
 }
 
-@mixin relative() {
-  @include position(relative);
+@mixin get-match-value-of-props($props, $prop-list) {
+  @each $key in $prop-list {
+    $key-index: list.index($props, $key);
+    @if is-number($key-index) {
+      $prop: list.nth($props, $key-index);
+      @if string.length($prop) == 1 {
+        $prop: get-prop-name($prop);
+      }
+      $value: list.nth($props, $key-index + 1);
+      #{$prop}: $value;
+    }
+  }
 }
-@mixin absolute() {
-  @include position(absolute);
+
+@mixin position($type, $props: ()) {
+  position: $type;
+  @include get-match-value-of-props($props, z-index z);
+  @include get-match-value-of-props($props, top t);
+  @include get-match-value-of-props($props, right r);
+  @include get-match-value-of-props($props, bottom b);
+  @include get-match-value-of-props($props, left l);
 }
-@mixin fixed() {
-  @include position(fixed);
+
+@mixin relative($props) {
+  @include position(relative, $props);
 }
-@mixin sticky() {
-  @include position(sticky);
+
+@mixin absolute($props) {
+  @include position(absolute, $props);
+}
+
+@mixin fixed($props) {
+  @include position(fixed, $props);
+}
+
+@mixin sticky($props) {
+  @include position(sticky, $props);
+}
+
+@mixin static() {
+  @include position(static);
 }

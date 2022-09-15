@@ -1,0 +1,27 @@
+@use 'sass:map';
+@use '../abstracts' as *;
+
+@mixin make-color-util($name) {
+  $prefixes: 'text', 'bg';
+  $color-value: map.get($colors, $name);
+  $name: if(is-color($name), #{$name}, $name);
+
+  @each $prefix in $prefixes {
+    $prop: if($prefix == 'text', 'color', 'background-color');
+    @if is-color($color-value) {
+      .#{$prefix}-#{$name} {
+        #{$prop}: $color-value;
+      }
+    } @else if is-map($color-value) {
+      @each $variant, $value in $color-value {
+        .#{$prefix}-#{$name}-#{$variant} {
+          #{$prop}: $value;
+        }
+      }
+    }
+  }
+}
+
+@each $color, $_value in $colors {
+  @include make-color-util($color);
+}

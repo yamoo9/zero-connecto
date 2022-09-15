@@ -1,10 +1,7 @@
-# Cross Direction Carousel UI 디자인 실습
+# Sass 유틸리티
 
-크로스 디렉션 캐러셀 UI 디자인 with Sass
+사용자 정의 Sass 유틸리티를 작성합니다.
 
-- [x] Sass 매뉴얼 개발 환경 구성
-- [x] 디자인 토큰(Token) - 색상 체계, 타이포그래피 설계
-- [ ] ...
-- [ ] ...
-- [ ] ...
-- [ ] ...
+- [ ] spacing 유틸리티
+- [ ] padding 유틸리티
+- [ ] position 유틸리티

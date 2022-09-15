@@ -4,15 +4,9 @@
 @use 'abstracts' as *;
 
 .content {
-  // @include position(absolute, t 20px z 900 b 20px r 20px);
-  // @include position(relative, t 10px r 20px);
-  // @include position(relative, (
-  //   top: 20px,
-  //   right: 10px
-  // ));
-  // @include relative();
-}
+  @include relative(t 48px z 800);
 
-.banner {
-  @include sticky(t 48px z 800);
+  .banner {
+    @include sticky(t 48px z 800);
+  }
 }

@@ -12,6 +12,21 @@
   }
 }
 
+@layer components {
+  /* 반응형 카드 컴포넌트 */
+  .Card {
+    /* 모바일 퍼스트 */
+    @apply flex flex-col items-start gap-4 w-full mx-4 p-8 rounded shadow-2xl shadow-yamoo9-indigo-600 text-white bg-yamoo9-indigo-400;
+    /* md */
+    @apply md:inline-flex md:w-auto;
+    /* lg */
+    @apply lg:bg-yamoo9-indigo-700;
+  }
+  .Card__link {
+    @apply inline-block mt-2 text-sm text-tailwind;
+  }
+}
+
 @layer utilities {
   .a11y-hidden {
     @apply overflow-hidden absolute w-px h-px -m-px border-0 p-0 whitespace-nowrap;

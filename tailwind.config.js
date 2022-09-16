@@ -1,8 +1,14 @@
+const { em } = require('./src/utils/unit');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['public/**/*.html'],
   theme: {
     extend: {
+      screens: {
+        '3xl': em(1600),
+        '4xl': em(1940),
+      },
       colors: {
         tailwind: '#38bdf8',
         'yamoo9-indigo': {

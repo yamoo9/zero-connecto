@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  [hidden] {
+    @apply hidden;
+  }
+
+  abbr[title] {
+    @apply cursor-help no-underline;
+  }
+}
+
+@layer utilities {
+  .a11y-hidden {
+    @apply overflow-hidden absolute w-px h-px -m-px border-0 p-0 whitespace-nowrap;
+    clip: rect(0, 0, 0, 0);
+  }
+}

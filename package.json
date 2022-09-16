@@ -1,8 +1,15 @@
 {
   "scripts": {
-    "serve": "live-server public --host=localhost --port=8080 --no-browser"
+    "dev": "run-p watch serve",
+    "serve": "live-server public --host=localhost --port=3000 --no-browser",
+    "compile": "tailwindcss -i src/tailwind.css -o public/assets/styles/main.css",
+    "watch": "npm run compile -- --watch",
+    "build": "npm run compile -- --minify"
   },
   "devDependencies": {
-    "live-server": "1.2.2"
+    "caniuse-lite": "1.0.30001402",
+    "live-server": "1.2.2",
+    "npm-run-all": "4.1.5",
+    "tailwindcss": "3.1.8"
   }
 }

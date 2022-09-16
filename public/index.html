@@ -40,54 +40,26 @@
       rel="stylesheet"
       href="//gif.helltabus.com/libs/spoqa-han-sans-neo/css/SpoqaHanSansNeo-kr.css" />
 
-    <style type="text/tailwindcss">
-      @layer components {
-        .Button {
-          @apply flex justify-center items-center px-6 py-2 rounded text-sm leading-none;
-        }
-      }
-
-      @layer utilities {
-        .my-underline {
-          padding: 0.2em;
-          border-bottom: 2px solid currentColor;
-        }
-      }
-    </style>
-
-    <script src="//cdn.tailwindcss.com"></script>
-
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              "yamoo9-indigo": {
-                "100": "#dbd1f7",
-                "200": "#b7a3ef",
-                "300": "#9375e7",
-                "400": "#6e47df",
-                "500": "#4a19d7",
-                "600": "#3b14ac",
-                "700": "#2d0f81",
-                "800": "#1e0a56",
-                "900": "#0f052b"
-              },
-            }
-          }
-        }
-      }
-    </script>
+    <link rel="stylesheet" href="assets/styles/main.css" />
   </head>
 
-  <body>
+  <body class="h-screen bg-yamoo9-indigo-600 text-white flex justify-center items-center">
 
-    <div class="m-2 flex gap-2">
-      <button type="button" class="Button bg-yamoo9-indigo-500 text-white">
-        저장
-      </button>
-      <button type="button" class="Button bg-yamoo9-indigo-100 text-yamoo9-indigo-800">취소</button>
-    </div>
+    <figure class="rounded w-full mx-4 shadow-2xl flex flex-col items-start gap-4 bg-yamoo9-indigo-900 p-8 text-white">
+      <img class="inline-block h-6" src="assets/images/tailwindcss-logotype-white.svg" alt="" />
+      <figcaption>
+        <h3 class="a11y-hidden" lang="en">Tailwind <abbr title="Cascading Style Sheet">CSS</abbr></h3>
+        <p class="text-sm">다양한 Tailwind CSS의 유틸리티 세트를 활용해 복잡한 컴포넌트를 구성할 수 있습니다.</p>
+        <a 
+          class="block mt-2 text-sm text-tailwind"
+          href="https://tailwindcss.com/docs/utility-first"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          유틸리티 퍼스트 펀더멘탈
+        </a>
+      </figcaption>
+    </figure>
 
   </body>
 

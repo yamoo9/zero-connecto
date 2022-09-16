@@ -41,9 +41,10 @@
       href="//gif.helltabus.com/libs/spoqa-han-sans-neo/css/SpoqaHanSansNeo-kr.css" />
 
     <link rel="stylesheet" href="assets/styles/main.css" />
+    <script type="module" src="assets/scripts/main.js"></script>
   </head>
 
-  <body class="h-screen bg-tailwind text-white flex justify-center items-center">
+  <body class="h-screen bg-tailwind dark:bg-black text-white flex flex-col gap-y-12 justify-center items-center"> 
 
     <figure class="Card">
       <img class="inline-block h-6" src="assets/images/tailwindcss-logotype-white.svg" alt="" />
@@ -51,7 +52,7 @@
         <h3 class="a11y-hidden" lang="en">Tailwind <abbr title="Cascading Style Sheet">CSS</abbr></h3>
         <p class="text-sm">다양한 Tailwind CSS의 유틸리티 세트를 활용해 복잡한 컴포넌트를 구성할 수 있습니다.</p>
         <a 
-          class="Card__link hover:text-white transition duration-300 outline-none focus:ring-1 ring-tailwind ring-offset-2 ring-offset-transparent rounded-full px-2"
+          class="Card__link"
           href="https://tailwindcss.com/docs/utility-first"
           rel="noopener noreferrer"
           target="_blank"
@@ -60,6 +61,17 @@
         </a>
       </figcaption>
     </figure>
+
+    <div class="flex gap-[19px] items-center">
+      <div class="Circle bg-yellow-400 dark:bg-yellow-100"></div>
+      <div class="Circle bg-purple-400 dark:bg-purple-100"></div>
+      <div class="Circle bg-pink-400 dark:bg-pink-100"></div>
+    </div>
+
+    <button type="button" class="Button toggleThemeButton" aria-label="다크 모드 전환" title="다크 모드 전환">
+      <svg class="moon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+      <svg class="sun" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+    </button>
 
   </body>
 

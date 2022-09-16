@@ -21,13 +21,36 @@
     @apply md:inline-flex md:w-auto;
     /* lg */
     @apply lg:bg-yamoo9-indigo-700;
+    /* dark */
+    @apply dark:shadow-slate-800;
   }
   .Card__link {
-    @apply inline-block mt-2 text-sm text-tailwind;
+    @apply inline-block mt-2 text-sm text-tailwind  rounded-full px-2;
+    /* hover 상태 디자인 */
+    @apply hover:text-white transition duration-300;
+    /* focus 상태 디자인 */
+    @apply outline-none ring-tailwind ring-offset-2 ring-offset-transparent focus:ring-1;
+  }
+
+  .Circle {
+    @apply w-8 h-8 rounded-full border-white border-2;
+  }
+
+  .Button {
+    @apply cursor-pointer fixed top-3 right-3 z-50 p-2 opacity-80 transition duration-700;
+    @apply hover:opacity-100;
+  }
+
+  .Button svg {
+    @apply pointer-events-none w-7 h-7;
   }
 }
 
 @layer utilities {
+  .show {
+    @apply block;
+  }
+
   .a11y-hidden {
     @apply overflow-hidden absolute w-px h-px -m-px border-0 p-0 whitespace-nowrap;
     clip: rect(0, 0, 0, 0);

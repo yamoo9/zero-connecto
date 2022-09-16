@@ -4,7 +4,7 @@
     "serve": "live-server public --host=localhost --port=3000 --no-browser",
     "compile": "tailwindcss -i src/tailwind.css -o public/assets/styles/main.css",
     "watch": "npm run compile -- --watch",
-    "build": "npm run compile -- --minify"
+    "build": "tailwindcss -i src/tailwind.css -o public/assets/styles/build.min.css --minify"
   },
   "devDependencies": {
     "caniuse-lite": "1.0.30001402",
